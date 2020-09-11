@@ -4,34 +4,34 @@ import (
 	_ "net/http/pprof"
 )
 
-//func init() {
-//	fmt.Println("初始化package main init()")
-//	e := sys.SysInit(
-//		conf.Server.ReleaseTag,
-//		conf.Server.ProdMode,
-//		conf.Server.RedisAddr,
-//		conf.Server.DBName,
-//		conf.Server.RedisPwd,
-//		conf.Server.LogPath,
-//		"hall",
-//		conf.Server.LogFileSize,
-//		conf.Server.LogFileCount,
-//		conf.Server.MongoIp,
-//		conf.Server.MongoLogIp,
-//		conf.Server.DBName,
-//		[]string{tableName.DBT_T_PAYBASEDETAILS, tableName.DBT_T_USER})
-//	//初始化系统
-//	if e != nil {
-//		fmt.Printf("初始化的时候出错:%v", e)
-//		os.Exit(-1)
-//	}
-//
-//	//初始化微信支付回调
-//	service.DoInitWxpay(conf.Server.WXPAY_NOTIFYURL)
-//
-//	//初始化灰度的白名单
-//	model.GetGrayReleaseUsers()
-//}
+func init() {
+	//fmt.Println("初始化package main init()")
+	//e := sys.SysInit(
+	//	conf.Server.ReleaseTag,
+	//	conf.Server.ProdMode,
+	//	conf.Server.RedisAddr,
+	//	conf.Server.DBName,
+	//	conf.Server.RedisPwd,
+	//	conf.Server.LogPath,
+	//	"hall",
+	//	conf.Server.LogFileSize,
+	//	conf.Server.LogFileCount,
+	//	conf.Server.MongoIp,
+	//	conf.Server.MongoLogIp,
+	//	conf.Server.DBName,
+	//	[]string{tableName.DBT_T_PAYBASEDETAILS, tableName.DBT_T_USER})
+	////初始化系统
+	//if e != nil {
+	//	fmt.Printf("初始化的时候出错:%v", e)
+	//	os.Exit(-1)
+	//}
+	//
+	////初始化微信支付回调
+	//service.DoInitWxpay(conf.Server.WXPAY_NOTIFYURL)
+	//
+	////初始化灰度的白名单
+	//model.GetGrayReleaseUsers()
+}
 
 func main() {
 	////打印日志
