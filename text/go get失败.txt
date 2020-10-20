@@ -1,0 +1,4 @@
+开启go mod 模式
+set GO111MODULE=on
+使用百度的代理
+go env -w GOPROXY=https://goproxy.baidu.com
