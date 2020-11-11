@@ -1,6 +1,8 @@
 package util
 
 import (
+	"fmt"
+	"os"
 	"regexp"
 	"strconv"
 )
@@ -29,4 +31,10 @@ func reverse(str string) string {
 		runes[i],runes[len(runes)-i-1] = runes[len(runes)-i-1],runes[i]
 	}
 	return string(runes)
+}
+
+//获取当前路径
+func getwd() {
+	dir,_ := os.Getwd()
+	fmt.Println("当前路径：",dir)
 }
