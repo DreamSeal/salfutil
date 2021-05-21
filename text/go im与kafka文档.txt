@@ -1,0 +1,28 @@
+https://github.com/Terry-Mao/goim/blob/master/README_cn.md
+https://github.com/Terry-Mao/goim
+
+//下载jdk
+yum -y install java-1.8.0-openjdk
+
+//下载zookeeper
+wget https://archive.apache.org/dist/zookeeper/zookeeper-3.5.8/apache-zookeeper-3.5.8-bin.tar.gz
+tar -xvf apache-zookeeper-3.5.8-bin.tar.gz
+
+//下载kafka
+wget https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.8.0/kafka_2.12-2.8.0.tgz
+tar -xvf kafka_2.12-2.8.0.tgz
+
+wget -c --no-check-certificate https://storage.googleapis.com/golang/go1.15.2.linux-amd64.tar.gz
+tar -xvf go1.15.2.linux-amd64.tar.gz -C /usr/local
+
+
+//进入kafka目录
+cd kafka_2.12-2.8.0
+
+//先开启zookeeper
+bin/zookeeper-server-start.sh config/zookeeper.properties &
+
+//开启kafka,开启之前一定先启动zookeeper
+bin/kafka-server-start.sh config/server.properties
+
+
